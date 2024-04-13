@@ -15,7 +15,7 @@ function PremierLeague() {
       method: "GET"
     })
       .then(res => res.json())
-      .then(data => {setMatches(data.events); console.log(data.events)})
+      .then(data => setMatches(data.events))
   }, [matchday])
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function PremierLeague() {
   }, [])
 
   return <>
-  <h1>Premier League</h1>
+    <h1>Premier League</h1>
     <Tabs fill>
       <Tab eventKey="Table" title="Table">
         <Table>
@@ -46,22 +46,27 @@ function PremierLeague() {
             {
               table.map(team => {
                 return <tr key={team.strTeam}>
-                  <td style={{ backgroundColor: team.intRank > 18 ? "#fc3f3f" : "white" }}>{team.intRank}</td>
-                  <td style={{ backgroundColor: team.intRank > 18 ? "#fc3f3f" : "white" }}>{team.strTeam}</td>
-                  <td style={{ backgroundColor: team.intRank > 18 ? "#fc3f3f" : "white" }}>{team.intPlayed}</td>
-                  <td style={{ backgroundColor: team.intRank > 18 ? "#fc3f3f" : "white" }}>{team.intWin}</td>
-                  <td style={{ backgroundColor: team.intRank > 18 ? "#fc3f3f" : "white" }}>{team.intDraw}</td>
-                  <td style={{ backgroundColor: team.intRank > 18 ? "#fc3f3f" : "white" }}>{team.intLoss}</td>
-                  <td style={{ backgroundColor: team.intRank > 18 ? "#fc3f3f" : "white" }}>{team.intPoints}</td>
+                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intRank}</td>
+                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.strTeam}</td>
+                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intPlayed}</td>
+                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intWin}</td>
+                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intDraw}</td>
+                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intLoss}</td>
+                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intPoints}</td>
                 </tr>
               })
             }
           </tbody>
         </Table>
+        <div style={{ textAlign: 'left' }}>
+          <p style={{ color: "#38abd8" }}>UEFA Champions League Group Stage</p>
+          <p style={{ color: "#eab327" }}>Europe League Group Stage</p>
+          <p style={{ color: "#fc3f3f" }}>Relegation</p>
+        </div>
       </Tab>
       <Tab eventKey="Fixtures" title="Fixtures">
         <Dropdown>
-          <Dropdown.Toggle>Select Matchday</Dropdown.Toggle>
+          <Dropdown.Toggle style={{ marginTop: 10 }}>Select Matchday</Dropdown.Toggle>
           <Dropdown.Menu>
             {
               matchdays.map(matchday => <Dropdown.Item onClick={() => setMatchday(matchday + 1)} key={matchday + 1}>{matchday + 1}</Dropdown.Item>)
