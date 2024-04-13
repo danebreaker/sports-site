@@ -4,7 +4,7 @@ import '../../App.css';
 
 function AllLeagues() {
   const [leagues, setLeagues] = useState([]);
-  const importantLeagues = ["English Premier League", "English League Championship", "German Bundesliga", "Italian Serie A", "French Lique 1", "Spanish La Liga", "American Major League Soccer", "NBA", "NFL", "English League 1", "English League 2"]
+  const importantLeagues = ["English Premier League", "English League Championship", "German Bundesliga", "Italian Serie A", "French Lique 1", "Spanish La Liga", "American Major League Soccer", "NBA", "NFL", "English League 1", "English League 2", "USL League One", "USL League Two", "American USL Championship"]
 
   useEffect(() => {
     fetch("https://www.thesportsdb.com/api/v1/json/3/all_leagues.php", {
@@ -23,6 +23,8 @@ function AllLeagues() {
   }, [])
 
   return <>
+  <h1>In Progress...</h1>
+  <h1>Buttons dont do anything</h1>
     <Container fluid>
       <Row>
         {

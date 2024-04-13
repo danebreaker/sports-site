@@ -15,7 +15,7 @@ function PremierLeague() {
       method: "GET"
     })
       .then(res => res.json())
-      .then(data => setMatches(data.events))
+      .then(data => {setMatches(data.events); console.log(data.events)})
   }, [matchday])
 
   useEffect(() => {
@@ -27,6 +27,7 @@ function PremierLeague() {
   }, [])
 
   return <>
+  <h1>Premier League</h1>
     <Tabs fill>
       <Tab eventKey="Table" title="Table">
         <Table>
