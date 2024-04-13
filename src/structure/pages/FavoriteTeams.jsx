@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
-import MatchCard from './components/MatchCard';
-import './App.css'
+import { Col, Container, Row } from 'react-bootstrap';
+import MatchCard from '../../components/MatchCard';
+import '../../App.css';
 
 function FavoriteTeams() {
 

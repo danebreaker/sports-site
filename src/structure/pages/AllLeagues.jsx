@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
-import './App.css'
+import '../../App.css';
 
 function AllLeagues() {
   const [leagues, setLeagues] = useState([]);

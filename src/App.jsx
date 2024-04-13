@@ -1,4 +1,4 @@
-import SportsRouter from './SportsRouter';
+import SportsRouter from './structure/SportsRouter';
 
 function App() {
   return <>
