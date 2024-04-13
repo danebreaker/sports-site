@@ -5,7 +5,8 @@ export default function MatchCard(props) {
 
     return <Card style={{ backgroundColor: "#383838", color: "white", margin: 10, alignContent: 'center' }}>
         <h5>{props.strEvent}</h5>
-        <h6>{date.toDateString()}</h6>
+        <h6>{props.strSport === "Soccer" ? props.strLeague : ""}</h6>
+        <h7>{date.toDateString()}</h7>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
             <img src={props.strHomeTeamBadge + '/tiny'}></img>
             <h4 style={{ marginTop: 10, marginLeft: 10, marginRight: 10}}>{props.intHomeScore ? props.intHomeScore : "0"}</h4>

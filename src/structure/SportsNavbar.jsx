@@ -13,6 +13,7 @@ export default function SportsNavbar(props) {
                 <Nav.Link as={Link} to="/">Favorite Teams</Nav.Link>
                 <Nav.Link as={Link} to="/AllLeagues">All Leagues</Nav.Link>
                 <Nav.Link as={Link} to="/PremierLeague">Premier League</Nav.Link>
+                <Nav.Link as={Link} to="/NBA">NBA</Nav.Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>
