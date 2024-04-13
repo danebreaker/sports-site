@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 
 export default function MatchCard(props) {
-    const date = new Date(props.dateEvent);
+    const date = new Date(props.dateEventLocal);
 
     return <Card style={{ backgroundColor: "#383838", color: "white", margin: 10, alignContent: 'center' }}>
         <h5>{props.strEvent}</h5>

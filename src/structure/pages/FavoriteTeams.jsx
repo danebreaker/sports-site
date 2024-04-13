@@ -13,7 +13,6 @@ function FavoriteTeams() {
     const [minnLast5, setMinnLast5] = useState([]);
     const [madLast5, setMadLast5] = useState([]);
 
-
     const importantLeagues = ["English Premier League", "English League Championship", "German Bundesliga", "Italian Serie A", "French Lique 1", "Spanish La Liga", "American Major League Soccer", "NBA", "NFL", "English League 1", "English League 2", "UEFA Champions League"]
     const importantTeams = [["Green Bay Packers", 134940], ["Milwaukee Bucks", 134874], ["Milwaukee Brewers", 135274], ["Manchester City", 133613], ["Wrexham", 134775], ["Minnesota United", 135852], ["Forward Madison FC", 142160]]
 
