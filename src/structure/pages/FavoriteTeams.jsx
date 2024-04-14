@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Tab, Tabs } from 'react-bootstrap';
 import MatchCard from '../../components/MatchCard';
 import '../../App.css';
 
@@ -70,36 +70,97 @@ function FavoriteTeams() {
 
     return <>
         <Container fluid>
-            <Row>
-                <h1>Packers</h1>
-                {
-                    packLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                }
-                <h1>Bucks</h1>
-                {
-                    bucksLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                }
-                <h1>Brewers</h1>
-                {
-                    brewLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                }
-                <h1>Manchester City</h1>
-                {
-                    mcLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                }
-                <h1>Wrexham</h1>
-                {
-                    wrexLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                }
-                <h1>Minnesota United</h1>
-                {
-                    minnLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                }
-                <h1>Forward Madison</h1>
-                {
-                    madLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                }
-            </Row>
+            <h1>Packers</h1>
+            <Tabs>
+                <Tab eventKey="Last 5" title="Last 5">
+                    <Row>
+                        {
+                            packLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                </Tab>
+                <Tab eventKey="Next 5" title="Next 5">
+                    <p>Coming Soon...</p>
+                </Tab>
+            </Tabs>
+            <h1>Bucks</h1>
+            <Tabs>
+                <Tab eventKey="Last 5" title="Last 5">
+                    <Row>
+                        {
+                            bucksLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                </Tab>
+                <Tab eventKey="Next 5" title="Next 5">
+                    <p>Coming Soon...</p>
+                </Tab>
+            </Tabs>
+            <h1>Brewers</h1>
+            <Tabs>
+                <Tab eventKey="Last 5" title="Last 5">
+                    <Row>
+                        {
+                            brewLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                </Tab>
+                <Tab eventKey="Next 5" title="Next 5">
+                    <p>Coming Soon...</p>
+                </Tab>
+            </Tabs>
+            <h1>Manchester City</h1>
+            <Tabs>
+                <Tab eventKey="Last 5" title="Last 5">
+                    <Row>
+                        {
+                            mcLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                </Tab>
+                <Tab eventKey="Next 5" title="Next 5">
+                    <p>Coming Soon...</p>
+                </Tab>
+            </Tabs>
+            <h1>Wrexham</h1>
+            <Tabs>
+                <Tab eventKey="Last 5" title="Last 5">
+                    <Row>
+                        {
+                            wrexLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                </Tab>
+                <Tab eventKey="Next 5" title="Next 5">
+                    <p>Coming Soon...</p>
+                </Tab>
+            </Tabs>
+            <h1>Minnesota United</h1>
+            <Tabs>
+                <Tab eventKey="Last 5" title="Last 5">
+                    <Row>
+                        {
+                            minnLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                </Tab>
+                <Tab eventKey="Next 5" title="Next 5">
+                    <p>Coming Soon...</p>
+                </Tab>
+            </Tabs>
+            <h1>Forward Madison</h1>
+            <Tabs>
+                <Tab eventKey="Last 5" title="Last 5">
+                    <Row>
+                        {
+                            madLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                </Tab>
+                <Tab eventKey="Next 5" title="Next 5">
+                    <p>Coming Soon...</p>
+                </Tab>
+            </Tabs>
         </Container>
     </>
 }

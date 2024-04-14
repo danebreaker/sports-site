@@ -25,6 +25,9 @@ export default function SportsNavbar(props) {
                 <Nav.Link as={Link} to="/NBA" onClick={() => setExpanded(false)}>NBA</Nav.Link>
                 <Nav.Link as={Link} to="/MLB" onClick={() => setExpanded(false)}>MLB</Nav.Link>
                 <Nav.Link as={Link} to="/PremierLeague" onClick={() => setExpanded(false)}>Premier League</Nav.Link>
+                <Nav.Link as={Link} to="/EnglishChampionship" onClick={() => setExpanded(false)}>English Championship</Nav.Link>
+                <Nav.Link as={Link} to="/EnglishLeagueOne" onClick={() => setExpanded(false)}>English League 1</Nav.Link>
+                <Nav.Link as={Link} to="/EnglishLeagueTwo" onClick={() => setExpanded(false)}>English League 2</Nav.Link>
                 <Nav.Link as={Link} to="/ChampionsLeague" onClick={() => setExpanded(false)}>Champions League</Nav.Link>
                 <Nav.Link as={Link} to="/MLS" onClick={() => setExpanded(false)}>MLS</Nav.Link>
                 <Nav.Link as={Link} to="/USLLeagueOne" onClick={() => setExpanded(false)}>USL League One</Nav.Link>
