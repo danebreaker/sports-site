@@ -69,7 +69,7 @@ function FavoriteTeams() {
     }, [])
 
     return <>
-        <Container fluid>
+        <Container>
             <h1>Packers</h1>
             <Tabs>
                 <Tab eventKey="Last 5" title="Last 5">
