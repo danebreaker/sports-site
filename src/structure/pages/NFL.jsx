@@ -38,6 +38,7 @@ function NFL() {
                 <h3>Coming Soon...</h3>
             </Tab>
             <Tab eventKey="Schedule" title="Schedule">
+                <h3>Week {week} {season} Season</h3>
                 <div style={{ display: "inline-flex" }}>
                     <Dropdown style={{ marginRight: 5, marginTop: 10}}>
                         <Dropdown.Toggle>Select Week</Dropdown.Toggle>
