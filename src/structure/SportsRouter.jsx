@@ -9,6 +9,7 @@ import MLB from "./pages/MLB";
 import MLS from "./pages/MLS";
 import ChampionsLeague from "./pages/ChampionsLeague";
 import HomePage from "./pages/HomePage";
+import USLLeagueOne from "./pages/USLLeagueOne";
 
 export default function SportsRouter() {
     return <BrowserRouter>
@@ -22,6 +23,7 @@ export default function SportsRouter() {
                 <Route path="/MLB" element={<MLB />} />
                 <Route path="/MLS" element={<MLS />} />
                 <Route path="/ChampionsLeague" element={<ChampionsLeague />} />
+                <Route path="/USLLeagueOne" element={<USLLeagueOne />} />
             </Route>
         </Routes>
     </BrowserRouter>
