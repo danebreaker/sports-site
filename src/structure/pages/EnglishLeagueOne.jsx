@@ -5,10 +5,10 @@ import '../../App.css';
 
 function EnglishLeagueOne() {
     const [matches, setMatches] = useState([]);
-    const [matchday, setMatchday] = useState(33);
+    const [matchday, setMatchday] = useState(45);
     const [table, setTable] = useState([]);
 
-    const matchdays = [...Array(38).keys()];
+    const matchdays = [...Array(46).keys()];
 
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/3/eventsround.php?id=4396&r=${matchday}&s=2023-2024`, {
@@ -68,7 +68,7 @@ function EnglishLeagueOne() {
                 <Dropdown>
                     <h3>Matchday {matchday}</h3>
                     <Dropdown.Toggle style={{ marginTop: 10 }}>Select Matchday</Dropdown.Toggle>
-                    <Dropdown.Menu>
+                    <Dropdown.Menu style={{ maxHeight: 300, overflowY: "scroll" }}>
                         {
                             matchdays.map(matchday => <Dropdown.Item onClick={() => setMatchday(matchday + 1)} key={matchday + 1}>{matchday + 1}</Dropdown.Item>)
                         }

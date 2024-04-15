@@ -42,7 +42,7 @@ function NFL() {
                 <div style={{ display: "inline-flex" }}>
                     <Dropdown style={{ marginRight: 5, marginTop: 10}}>
                         <Dropdown.Toggle>Select Week</Dropdown.Toggle>
-                        <Dropdown.Menu>
+                        <Dropdown.Menu style={{ maxHeight: 300, overflowY: "scroll" }}>
                             {
                                 season >= "2021" ?
                                     weeks18.map(week => <Dropdown.Item onClick={() => setWeek(week + 1)} key={week + 1}>{week + 1}</Dropdown.Item>)
@@ -53,7 +53,7 @@ function NFL() {
                     </Dropdown>
                     <Dropdown style={{ marginLeft: 5, marginTop: 10 }}>
                         <Dropdown.Toggle>Select Season</Dropdown.Toggle>
-                        <Dropdown.Menu>
+                        <Dropdown.Menu style={{ maxHeight: 300, overflowY: "scroll" }}>
                             {
                                 seasons.map(season => <Dropdown.Item onClick={() => setSeason(season.strSeason)} key={season.strSeason}>{season.strSeason}</Dropdown.Item>)
                             }

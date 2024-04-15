@@ -74,7 +74,7 @@ function MLS() {
                 <Dropdown>
                     <h3>Matchday {matchday}</h3>
                     <Dropdown.Toggle style={{ marginTop: 10 }}>Select Matchday</Dropdown.Toggle>
-                    <Dropdown.Menu>
+                    <Dropdown.Menu style={{ maxHeight: 300, overflowY: "scroll" }}>
                         {
                             matchdays.map(matchday => <Dropdown.Item onClick={() => setMatchday(matchday + 1)} key={matchday + 1}>{matchday + 1}</Dropdown.Item>)
                         }

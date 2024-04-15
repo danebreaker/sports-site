@@ -9,7 +9,7 @@ export default function SportsNavbar(props) {
     return <Navbar fixed="top" expand="lg" className="bg-body-tertiary" expanded={expanded} bg="dark" data-bs-theme="dark">
         <Navbar.Brand as={Link} to="/">
             <img
-                src="/src/assets/icon.png"
+                src="./icon.png"
                 width="30"
                 height="30"
                 className="d-inline-block align-top"
