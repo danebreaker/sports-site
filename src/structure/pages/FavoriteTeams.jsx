@@ -132,7 +132,7 @@ function FavoriteTeams() {
 
             <Tab eventKey="Schedule" title="Schedule">
                 <h1>Packers</h1>
-                <Tabs>
+                <Tabs fill>
                     <Tab eventKey="Last 5" title="Last 5">
                         <Container>
                             <Row>
@@ -159,7 +159,7 @@ function FavoriteTeams() {
                 </Tabs>
 
                 <h1>Bucks</h1>
-                <Tabs>
+                <Tabs fill>
                     <Tab eventKey="Last 5" title="Last 5">
                         <Container>
                             <Row>
@@ -185,7 +185,7 @@ function FavoriteTeams() {
                 </Tabs>
 
                 <h1>Brewers</h1>
-                <Tabs>
+                <Tabs fill>
                     <Tab eventKey="Last 5" title="Last 5">
                         <Container>
                             <Row>
@@ -211,7 +211,7 @@ function FavoriteTeams() {
                 </Tabs>
 
                 <h1>Manchester City</h1>
-                <Tabs>
+                <Tabs fill>
                     <Tab eventKey="Last 5" title="Last 5">
                         <Container>
                             <Row>
@@ -237,7 +237,7 @@ function FavoriteTeams() {
                 </Tabs>
 
                 <h1>Wrexham</h1>
-                <Tabs>
+                <Tabs fill>
                     <Tab eventKey="Last 5" title="Last 5">
                         <Container>
                             <Row>
@@ -263,7 +263,7 @@ function FavoriteTeams() {
                 </Tabs>
 
                 <h1>Minnesota United</h1>
-                <Tabs>
+                <Tabs fill>
                     <Tab eventKey="Last 5" title="Last 5">
                         <Container>
                             <Row>
@@ -289,7 +289,7 @@ function FavoriteTeams() {
                 </Tabs>
 
                 <h1>Forward Madison</h1>
-                <Tabs>
+                <Tabs fill>
                     <Tab eventKey="Last 5" title="Last 5">
                         <Container>
                             <Row>
