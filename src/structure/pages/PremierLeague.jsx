@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Col, Container, Dropdown, Row, Tab, Table, Tabs } from 'react-bootstrap';
+import { Button, Col, Container, Dropdown, Row, Tab, Table, Tabs } from 'react-bootstrap';
 import MatchCard from "../../components/MatchCard";
 import '../../App.css';
 
@@ -7,6 +7,8 @@ function PremierLeague() {
   const [matches, setMatches] = useState([]);
   const [matchday, setMatchday] = useState(33);
   const [table, setTable] = useState([]);
+  const [liveScores, setLiveScores] = useState([]);
+  const [upcomingMatches, setUpcomingMatches] = useState([]);
 
   const matchdays = [...Array(38).keys()];
 
@@ -19,16 +21,81 @@ function PremierLeague() {
   }, [matchday])
 
   useEffect(() => {
+    refreshScore();
+
     fetch(`https://www.thesportsdb.com/api/v1/json/3/lookuptable.php?l=4328&s=2023-2024`, {
       method: "GET"
     })
       .then(res => res.json())
       .then(data => setTable(data.table))
+
+    fetch(`https://www.thesportsdb.com/api/v1/json/60130162/eventsnextleague.php?id=4328`, {
+      method: "GET"
+    })
+      .then(res => res.json())
+      .then(data => setUpcomingMatches(data.events))
   }, [])
+
+  function refreshScore() {
+    fetch(`https://www.thesportsdb.com/api/v2/json/60130162/livescore.php?l=4480`, {
+      method: "GET"
+    })
+      .then(res => res.json())
+      .then(data => setLiveScores(data.events))
+  }
 
   return <>
     <h1>Premier League</h1>
     <Tabs fill>
+      <Tab eventKey="Live" title="Live Score">
+        <Button onClick={() => refreshScore()}>Refresh</Button>
+        <Container>
+          <Row>
+            {
+              liveScores ?
+                liveScores.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match}></MatchCard></Col>)
+                :
+                <>
+                  <h3>There are no matches right now</h3>
+                  <h6>Check back later</h6>
+                </>
+            }
+          </Row>
+        </Container>
+      </Tab>
+      <Tab eventKey="Upcoming" title="Upcoming Matches">
+        <Container>
+          <Row>
+            {
+              upcomingMatches ?
+                upcomingMatches.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match}></MatchCard></Col>)
+                :
+                <>
+                  <h3>There are no upcoming matches</h3>
+                  <h6>Check back later</h6>
+                </>
+            }
+          </Row>
+        </Container>
+      </Tab>
+      <Tab eventKey="Fixtures" title="Fixtures">
+        <Dropdown>
+          <h3>Matchday {matchday}</h3>
+          <Dropdown.Toggle style={{ marginTop: 10 }}>Select Matchday</Dropdown.Toggle>
+          <Dropdown.Menu style={{ maxHeight: 300, overflowY: "scroll" }}>
+            {
+              matchdays.map(matchday => <Dropdown.Item onClick={() => setMatchday(matchday + 1)} key={matchday + 1}>{matchday + 1}</Dropdown.Item>)
+            }
+          </Dropdown.Menu>
+        </Dropdown>
+        <Container>
+          <Row>
+            {
+              matches.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match}></MatchCard></Col>)
+            }
+          </Row>
+        </Container>
+      </Tab>
       <Tab eventKey="Table" title="Table">
         <Table>
           <thead>
@@ -61,26 +128,8 @@ function PremierLeague() {
         <div style={{ textAlign: 'left' }}>
           <p style={{ color: "#38abd8" }}>UEFA Champions League Group Stage</p>
           <p style={{ color: "#eab327" }}>Europe League Group Stage</p>
-          <p style={{ color: "#fc3f3f" }}>Relegation</p>
+          <p style={{ color: "#fc3f3f" }}>Relegation to Championship</p>
         </div>
-      </Tab>
-      <Tab eventKey="Fixtures" title="Fixtures">
-        <Dropdown>
-          <h3>Matchday {matchday}</h3>
-          <Dropdown.Toggle style={{ marginTop: 10 }}>Select Matchday</Dropdown.Toggle>
-          <Dropdown.Menu style={{ maxHeight: 300, overflowY: "scroll" }}>
-            {
-              matchdays.map(matchday => <Dropdown.Item onClick={() => setMatchday(matchday + 1)} key={matchday + 1}>{matchday + 1}</Dropdown.Item>)
-            }
-          </Dropdown.Menu>
-        </Dropdown>
-        <Container>
-          <Row>
-            {
-              matches.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match}></MatchCard></Col>)
-            }
-          </Row>
-        </Container>
       </Tab>
     </Tabs>
   </>

@@ -17,7 +17,7 @@ export default function MatchCard(props) {
             {/* <h4>{props.strAwayTeam}</h4> */}
             <img src={props.strAwayTeamBadge + '/tiny'}></img>
         </div>
-        <h6>{props.strStatus === "1H" ? "1st Half" : props.strStatus === "2H" ? "2nd Half" : props.strStatus === "FT" ? "Final" : props.strStatus === "Match Finished" ? "Full Time" : props.strStatus}</h6>
+        <h6>{props.strStatus === "1H" ? "1st Half" : props.strStatus === "2H" ? "2nd Half" : props.strStatus === "FT" ? "Final" : props.strStatus === "Match Finished" ? "Full Time" : props.strStatus === "NS" ? "Not Started" : props.strStatus}</h6>
         {(props.strStatus === "Match Finished" || props.strStatus === "FT") && props.strVideo ? <a href={props.strVideo} target="_blank" style={{ textDecoration: "none" }}>Highlights</a> : <></>}
     </Card>
 }

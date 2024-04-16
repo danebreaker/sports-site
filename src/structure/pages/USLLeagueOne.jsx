@@ -15,7 +15,7 @@ function USLLeagueOne() {
       method: "GET"
     })
       .then(res => res.json())
-      .then(data => {setMatches(data.events); console.log(data)})
+      .then(data => {setMatches(data.events)})
   }, [matchday])
 
   useEffect(() => {
@@ -46,23 +46,23 @@ function USLLeagueOne() {
             {
               table.map(team => {
                 return <tr key={team.strTeam}>
-                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intRank}</td>
-                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.strTeam}</td>
-                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intPlayed}</td>
-                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intWin}</td>
-                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intDraw}</td>
-                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intLoss}</td>
-                  <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intPoints}</td>
+                  <td>{team.intRank}</td>
+                  <td>{team.strTeam}</td>
+                  <td>{team.intPlayed}</td>
+                  <td>{team.intWin}</td>
+                  <td>{team.intDraw}</td>
+                  <td>{team.intLoss}</td>
+                  <td>{team.intPoints}</td>
                 </tr>
               })
             }
           </tbody>
         </Table>
-        <div style={{ textAlign: 'left' }}>
+        {/* <div style={{ textAlign: 'left' }}>
           <p style={{ color: "#38abd8" }}>UEFA Champions League Group Stage</p>
           <p style={{ color: "#eab327" }}>Europe League Group Stage</p>
           <p style={{ color: "#fc3f3f" }}>Relegation</p>
-        </div>
+        </div> */}
       </Tab>
       <Tab eventKey="Fixtures" title="Fixtures">
         <Dropdown>
