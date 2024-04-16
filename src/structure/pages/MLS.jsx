@@ -37,7 +37,7 @@ function MLS() {
     }, [])
 
     function refreshScore() {
-        fetch(`https://www.thesportsdb.com/api/v2/json/60130162/livescore.php?l=4480`, {
+        fetch(`https://www.thesportsdb.com/api/v2/json/60130162/livescore.php?l=4346`, {
             method: "GET"
         })
             .then(res => res.json())
