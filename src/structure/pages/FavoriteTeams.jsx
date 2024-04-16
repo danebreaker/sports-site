@@ -125,13 +125,13 @@ function FavoriteTeams() {
     }, [])
 
     return <>
-        <Container fluid>
-            <Tabs>
-                <Tab eventKey="Live Scores" title="Live Scores">
-                    <p>Coming soon...</p>
-                </Tab>
-                <Tab eventKey="Schedule" title="Schedule">
-                    <h1>Packers</h1>
+        <Tabs>
+            <Tab eventKey="Live Scores" title="Live Scores">
+                <p>Coming soon...</p>
+            </Tab>
+            <Tab eventKey="Schedule" title="Schedule">
+                <h1>Packers</h1>
+                <Container>
                     <Tabs>
                         <Tab eventKey="Last 5" title="Last 5">
                             <Row>
@@ -153,7 +153,9 @@ function FavoriteTeams() {
                             </Row>
                         </Tab>
                     </Tabs>
-                    <h1>Bucks</h1>
+                </Container>
+                <h1>Bucks</h1>
+                <Container>
                     <Tabs>
                         <Tab eventKey="Last 5" title="Last 5">
                             <Row>
@@ -174,7 +176,9 @@ function FavoriteTeams() {
                             </Row>
                         </Tab>
                     </Tabs>
-                    <h1>Brewers</h1>
+                </Container>
+                <h1>Brewers</h1>
+                <Container>
                     <Tabs>
                         <Tab eventKey="Last 5" title="Last 5">
                             <Row>
@@ -195,7 +199,9 @@ function FavoriteTeams() {
                             </Row>
                         </Tab>
                     </Tabs>
-                    <h1>Manchester City</h1>
+                </Container>
+                <h1>Manchester City</h1>
+                <Container>
                     <Tabs>
                         <Tab eventKey="Last 5" title="Last 5">
                             <Row>
@@ -216,7 +222,9 @@ function FavoriteTeams() {
                             </Row>
                         </Tab>
                     </Tabs>
-                    <h1>Wrexham</h1>
+                </Container>
+                <h1>Wrexham</h1>
+                <Container>
                     <Tabs>
                         <Tab eventKey="Last 5" title="Last 5">
                             <Row>
@@ -237,7 +245,9 @@ function FavoriteTeams() {
                             </Row>
                         </Tab>
                     </Tabs>
-                    <h1>Minnesota United</h1>
+                </Container>
+                <h1>Minnesota United</h1>
+                <Container>
                     <Tabs>
                         <Tab eventKey="Last 5" title="Last 5">
                             <Row>
@@ -258,7 +268,9 @@ function FavoriteTeams() {
                             </Row>
                         </Tab>
                     </Tabs>
-                    <h1>Forward Madison</h1>
+                </Container>
+                <h1>Forward Madison</h1>
+                <Container>
                     <Tabs>
                         <Tab eventKey="Last 5" title="Last 5">
                             <Row>
@@ -279,9 +291,9 @@ function FavoriteTeams() {
                             </Row>
                         </Tab>
                     </Tabs>
-                </Tab>
-            </Tabs>
-        </Container>
+                </Container>
+            </Tab>
+        </Tabs>
     </>
 }
 
