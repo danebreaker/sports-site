@@ -129,19 +129,22 @@ function FavoriteTeams() {
             <Tab eventKey="Live Scores" title="Live Scores">
                 <p>Coming soon...</p>
             </Tab>
+
             <Tab eventKey="Schedule" title="Schedule">
                 <h1>Packers</h1>
-                <Container>
-                    <Tabs>
-                        <Tab eventKey="Last 5" title="Last 5">
+                <Tabs>
+                    <Tab eventKey="Last 5" title="Last 5">
+                        <Container>
                             <Row>
                                 {
                                     packLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
                                 }
                             </Row>
-                        </Tab>
-                        <Tab eventKey="Next 5" title="Next 5">
-                            {/* <p>Coming Soon...</p> */}
+                        </Container>
+                    </Tab>
+                    <Tab eventKey="Next 5" title="Next 5">
+                        {/* <p>Coming Soon...</p> */}
+                        <Container>
                             <Row>
 
                                 {
@@ -151,21 +154,24 @@ function FavoriteTeams() {
                                         <h3>No upcoming games</h3>
                                 }
                             </Row>
-                        </Tab>
-                    </Tabs>
-                </Container>
+                        </Container>
+                    </Tab>
+                </Tabs>
+
                 <h1>Bucks</h1>
-                <Container>
-                    <Tabs>
-                        <Tab eventKey="Last 5" title="Last 5">
+                <Tabs>
+                    <Tab eventKey="Last 5" title="Last 5">
+                        <Container>
                             <Row>
                                 {
                                     bucksLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
                                 }
                             </Row>
-                        </Tab>
-                        <Tab eventKey="Next 5" title="Next 5">
-                            {/* <p>Coming Soon...</p> */}
+                        </Container>
+                    </Tab>
+                    <Tab eventKey="Next 5" title="Next 5">
+                        {/* <p>Coming Soon...</p> */}
+                        <Container>
                             <Row>
                                 {
                                     bucksNext5 ?
@@ -174,21 +180,24 @@ function FavoriteTeams() {
                                         <h3>No upcoming games</h3>
                                 }
                             </Row>
-                        </Tab>
-                    </Tabs>
-                </Container>
+                        </Container>
+                    </Tab>
+                </Tabs>
+
                 <h1>Brewers</h1>
-                <Container>
-                    <Tabs>
-                        <Tab eventKey="Last 5" title="Last 5">
+                <Tabs>
+                    <Tab eventKey="Last 5" title="Last 5">
+                        <Container>
                             <Row>
                                 {
                                     brewLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
                                 }
                             </Row>
-                        </Tab>
-                        <Tab eventKey="Next 5" title="Next 5">
-                            {/* <p>Coming Soon...</p> */}
+                        </Container>
+                    </Tab>
+                    <Tab eventKey="Next 5" title="Next 5">
+                        {/* <p>Coming Soon...</p> */}
+                        <Container>
                             <Row>
                                 {
                                     brewNext5 ?
@@ -197,21 +206,24 @@ function FavoriteTeams() {
                                         <h3>No upcoming games</h3>
                                 }
                             </Row>
-                        </Tab>
-                    </Tabs>
-                </Container>
+                        </Container>
+                    </Tab>
+                </Tabs>
+
                 <h1>Manchester City</h1>
-                <Container>
-                    <Tabs>
-                        <Tab eventKey="Last 5" title="Last 5">
+                <Tabs>
+                    <Tab eventKey="Last 5" title="Last 5">
+                        <Container>
                             <Row>
                                 {
                                     mcLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
                                 }
                             </Row>
-                        </Tab>
-                        <Tab eventKey="Next 5" title="Next 5">
-                            {/* <p>Coming Soon...</p> */}
+                        </Container>
+                    </Tab>
+                    <Tab eventKey="Next 5" title="Next 5">
+                        {/* <p>Coming Soon...</p> */}
+                        <Container>
                             <Row>
                                 {
                                     mcNext5 ?
@@ -220,21 +232,24 @@ function FavoriteTeams() {
                                         <h3>No upcoming games</h3>
                                 }
                             </Row>
-                        </Tab>
-                    </Tabs>
-                </Container>
+                        </Container>
+                    </Tab>
+                </Tabs>
+
                 <h1>Wrexham</h1>
-                <Container>
-                    <Tabs>
-                        <Tab eventKey="Last 5" title="Last 5">
+                <Tabs>
+                    <Tab eventKey="Last 5" title="Last 5">
+                        <Container>
                             <Row>
                                 {
                                     wrexLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
                                 }
                             </Row>
-                        </Tab>
-                        <Tab eventKey="Next 5" title="Next 5">
-                            {/* <p>Coming Soon...</p> */}
+                        </Container>
+                    </Tab>
+                    <Tab eventKey="Next 5" title="Next 5">
+                        {/* <p>Coming Soon...</p> */}
+                        <Container>
                             <Row>
                                 {
                                     wrexNext5 ?
@@ -243,21 +258,24 @@ function FavoriteTeams() {
                                         <h3>No upcoming games</h3>
                                 }
                             </Row>
-                        </Tab>
-                    </Tabs>
-                </Container>
+                        </Container>
+                    </Tab>
+                </Tabs>
+
                 <h1>Minnesota United</h1>
-                <Container>
-                    <Tabs>
-                        <Tab eventKey="Last 5" title="Last 5">
+                <Tabs>
+                    <Tab eventKey="Last 5" title="Last 5">
+                        <Container>
                             <Row>
                                 {
                                     minnLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
                                 }
                             </Row>
-                        </Tab>
-                        <Tab eventKey="Next 5" title="Next 5">
-                            {/* <p>Coming Soon...</p> */}
+                        </Container>
+                    </Tab>
+                    <Tab eventKey="Next 5" title="Next 5">
+                        {/* <p>Coming Soon...</p> */}
+                        <Container>
                             <Row>
                                 {
                                     minnNext5 ?
@@ -266,21 +284,24 @@ function FavoriteTeams() {
                                         <h3>No upcoming games</h3>
                                 }
                             </Row>
-                        </Tab>
-                    </Tabs>
-                </Container>
+                        </Container>
+                    </Tab>
+                </Tabs>
+
                 <h1>Forward Madison</h1>
-                <Container>
-                    <Tabs>
-                        <Tab eventKey="Last 5" title="Last 5">
+                <Tabs>
+                    <Tab eventKey="Last 5" title="Last 5">
+                        <Container>
                             <Row>
                                 {
                                     madLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
                                 }
                             </Row>
-                        </Tab>
-                        <Tab eventKey="Next 5" title="Next 5">
-                            {/* <p>Coming Soon...</p> */}
+                        </Container>
+                    </Tab>
+                    <Tab eventKey="Next 5" title="Next 5">
+                        {/* <p>Coming Soon...</p> */}
+                        <Container>
                             <Row>
                                 {
                                     madNext5 ?
@@ -289,11 +310,11 @@ function FavoriteTeams() {
                                         <h3>No upcoming games</h3>
                                 }
                             </Row>
-                        </Tab>
-                    </Tabs>
-                </Container>
+                        </Container>
+                    </Tab>
+                </Tabs>
             </Tab>
-        </Tabs>
+        </Tabs >
     </>
 }
 
