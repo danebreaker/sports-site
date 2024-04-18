@@ -13,6 +13,7 @@ import USLLeagueOne from "./pages/USLLeagueOne";
 import EnglishChampionship from "./pages/EnglishChampionship";
 import EnglishLeagueOne from "./pages/EnglishLeagueOne";
 import EnglishLeagueTwo from "./pages/EnglishLeagueTwo";
+import SoccerLandingPage from "./pages/SoccerLandingPage";
 
 export default function SportsRouter() {
     return <BrowserRouter>
@@ -30,6 +31,7 @@ export default function SportsRouter() {
                 <Route path="/EnglishChampionship" element={<EnglishChampionship />} />
                 <Route path="/EnglishLeagueOne" element={<EnglishLeagueOne />} />
                 <Route path="/EnglishLeagueTwo" element={<EnglishLeagueTwo />} />
+                <Route path="/SoccerLandingPage" element={<SoccerLandingPage />} />
             </Route>
         </Routes>
     </BrowserRouter>

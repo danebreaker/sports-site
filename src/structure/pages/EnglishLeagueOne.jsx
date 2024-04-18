@@ -27,7 +27,7 @@ function EnglishLeagueOne() {
     }, [])
 
     return <>
-        <h1>English League 1</h1>
+        <h1>English League One</h1>
         <Tabs fill>
             <Tab eventKey="Table" title="Table">
                 <Table>

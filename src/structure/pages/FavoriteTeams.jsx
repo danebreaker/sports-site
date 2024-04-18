@@ -127,192 +127,120 @@ function FavoriteTeams() {
     return <>
         <Tabs>
             <Tab eventKey="Live Scores" title="Live Scores">
-                <p>Coming soon...</p>
+                <h1>Coming Soon...</h1>
             </Tab>
-
-            <Tab eventKey="Schedule" title="Schedule">
-                <h1>Packers</h1>
-                <Tabs fill>
-                    <Tab eventKey="Last 5" title="Last 5">
-                        <Container>
-                            <Row>
-                                {
-                                    packLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                    <Tab eventKey="Next 5" title="Next 5">
-                        {/* <p>Coming Soon...</p> */}
-                        <Container>
-                            <Row>
-
-                                {
-                                    packNext5 ?
-                                        packNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                        :
-                                        <h3>No upcoming games</h3>
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                </Tabs>
-
-                <h1>Bucks</h1>
-                <Tabs fill>
-                    <Tab eventKey="Last 5" title="Last 5">
-                        <Container>
-                            <Row>
-                                {
-                                    bucksLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                    <Tab eventKey="Next 5" title="Next 5">
-                        {/* <p>Coming Soon...</p> */}
-                        <Container>
-                            <Row>
-                                {
-                                    bucksNext5 ?
-                                        bucksNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                        :
-                                        <h3>No upcoming games</h3>
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                </Tabs>
-
-                <h1>Brewers</h1>
-                <Tabs fill>
-                    <Tab eventKey="Last 5" title="Last 5">
-                        <Container>
-                            <Row>
-                                {
-                                    brewLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                    <Tab eventKey="Next 5" title="Next 5">
-                        {/* <p>Coming Soon...</p> */}
-                        <Container>
-                            <Row>
-                                {
-                                    brewNext5 ?
-                                        brewNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                        :
-                                        <h3>No upcoming games</h3>
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                </Tabs>
-
-                <h1>Manchester City</h1>
-                <Tabs fill>
-                    <Tab eventKey="Last 5" title="Last 5">
-                        <Container>
-                            <Row>
-                                {
-                                    mcLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                    <Tab eventKey="Next 5" title="Next 5">
-                        {/* <p>Coming Soon...</p> */}
-                        <Container>
-                            <Row>
-                                {
-                                    mcNext5 ?
-                                        mcNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                        :
-                                        <h3>No upcoming games</h3>
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                </Tabs>
-
-                <h1>Wrexham</h1>
-                <Tabs fill>
-                    <Tab eventKey="Last 5" title="Last 5">
-                        <Container>
-                            <Row>
-                                {
-                                    wrexLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                    <Tab eventKey="Next 5" title="Next 5">
-                        {/* <p>Coming Soon...</p> */}
-                        <Container>
-                            <Row>
-                                {
-                                    wrexNext5 ?
-                                        wrexNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                        :
-                                        <h3>No upcoming games</h3>
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                </Tabs>
-
-                <h1>Minnesota United</h1>
-                <Tabs fill>
-                    <Tab eventKey="Last 5" title="Last 5">
-                        <Container>
-                            <Row>
-                                {
-                                    minnLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                    <Tab eventKey="Next 5" title="Next 5">
-                        {/* <p>Coming Soon...</p> */}
-                        <Container>
-                            <Row>
-                                {
-                                    minnNext5 ?
-                                        minnNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                        :
-                                        <h3>No upcoming games</h3>
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                </Tabs>
-
-                <h1>Forward Madison</h1>
-                <Tabs fill>
-                    <Tab eventKey="Last 5" title="Last 5">
-                        <Container>
-                            <Row>
-                                {
-                                    madLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                    <Tab eventKey="Next 5" title="Next 5">
-                        {/* <p>Coming Soon...</p> */}
-                        <Container>
-                            <Row>
-                                {
-                                    madNext5 ?
-                                        madNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
-                                        :
-                                        <h3>No upcoming games</h3>
-                                }
-                            </Row>
-                        </Container>
-                    </Tab>
-                </Tabs>
+            <Tab eventKey="Upcoming Games" title="Upcoming Games">
+                <Container fluid>
+                    <Row>
+                        <h1>Packers</h1>
+                        {
+                            packNext5 ?
+                                packNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                                :
+                                <h3>No upcoming games</h3>
+                        }
+                    </Row>
+                    <Row>
+                        <h1>Bucks</h1>
+                        {
+                            bucksNext5 ?
+                                bucksNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                                :
+                                <h3>No upcoming games</h3>
+                        }
+                    </Row>
+                    <Row>
+                        <h1>Brewers</h1>
+                        {
+                            brewNext5 ?
+                                brewNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                                :
+                                <h3>No upcoming games</h3>
+                        }
+                    </Row>
+                    <Row>
+                        <h1>Manchester City</h1>
+                        {
+                            mcNext5 ?
+                                mcNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                                :
+                                <h3>No upcoming games</h3>
+                        }
+                    </Row>
+                    <Row>
+                        <h1>Wrexham AFC</h1>
+                        {
+                            wrexNext5 ?
+                                wrexNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                                :
+                                <h3>No upcoming games</h3>
+                        }
+                    </Row>
+                    <Row>
+                        <h1>Minnesota United</h1>
+                        {
+                            minnNext5 ?
+                                minnNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                                :
+                                <h3>No upcoming games</h3>
+                        }
+                    </Row>
+                    <Row>
+                        <h1>Forward Madison FC</h1>
+                        {
+                            madNext5 ?
+                                madNext5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                                :
+                                <h3>No upcoming games</h3>
+                        }
+                    </Row>
+                </Container>
+            </Tab>
+            <Tab eventKey="Previous Games" title="Previous Games">
+                <Container>
+                    <Row>
+                        <h1>Packers</h1>
+                        {
+                            packLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                    <Row>
+                        <h1>Bucks</h1>
+                        {
+                            bucksLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                    <Row>
+                        <h1>Brewers</h1>
+                        {
+                            brewLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                    <h1>Manchester City</h1>
+                    <Row>
+                        {
+                            mcLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                    <h1>Wrexham AFC</h1>
+                    <Row>
+                        {
+                            wrexLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                    <h1>Minnesota United</h1>
+                    <Row>
+                        {
+                            minnLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                    <h1>Forward Madison FC</h1>
+                    <Row>
+                        {
+                            madLast5.map(match => <Col xs={12} sm={6} md={4} lg={4} xl={3} key={match.idEvent}><MatchCard {...match} /></Col>)
+                        }
+                    </Row>
+                </Container>
             </Tab>
         </Tabs >
     </>
