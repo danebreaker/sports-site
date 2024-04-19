@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Button, Col, Container, Dropdown, Row, Tab, Table, Tabs } from 'react-bootstrap';
+import { Button, Col, Container, Dropdown, Row, Spinner, Tab, Table, Tabs } from 'react-bootstrap';
 import MatchCard from "../../components/MatchCard";
 import '../../App.css';
 
@@ -9,6 +9,7 @@ function PremierLeague() {
   const [table, setTable] = useState([]);
   const [liveScores, setLiveScores] = useState([]);
   const [upcomingMatches, setUpcomingMatches] = useState([]);
+  const [hideSpinner, setHideSpinner] = useState("none");
 
   const matchdays = [...Array(38).keys()];
 
@@ -41,14 +42,15 @@ function PremierLeague() {
       method: "GET"
     })
       .then(res => res.json())
-      .then(data => setLiveScores(data.events))
+      .then(data => { setLiveScores(data.events); setHideSpinner("none") })
   }
 
   return <>
     <h1>Premier League</h1>
     <Tabs fill>
-      <Tab eventKey="Live" title="Live Score">
-        <Button onClick={() => refreshScore()}>Refresh</Button>
+      <Tab eventKey="Live" title="Live Score" style={{ margin: 15 }}>
+        <Button onClick={() => { refreshScore(); setHideSpinner("inline-flex") }}>Refresh</Button>
+        <Spinner variant="danger" animation="grow" style={{ display: hideSpinner }} />
         <Container>
           <Row>
             {
@@ -63,7 +65,7 @@ function PremierLeague() {
           </Row>
         </Container>
       </Tab>
-      <Tab eventKey="Upcoming" title="Upcoming Matches">
+      <Tab eventKey="Upcoming" title="Upcoming Matches" style={{ margin: 15 }}>
         <Container>
           <Row>
             {
@@ -78,7 +80,7 @@ function PremierLeague() {
           </Row>
         </Container>
       </Tab>
-      <Tab eventKey="Fixtures" title="Fixtures">
+      <Tab eventKey="Fixtures" title="Fixtures" style={{ margin: 15 }}>
         <Dropdown>
           <h3>Matchday {matchday}</h3>
           <Dropdown.Toggle style={{ marginTop: 10 }}>Select Matchday</Dropdown.Toggle>
@@ -96,7 +98,7 @@ function PremierLeague() {
           </Row>
         </Container>
       </Tab>
-      <Tab eventKey="Table" title="Table">
+      <Tab eventKey="Table" title="Table" style={{ margin: 15 }}>
         <Table>
           <thead>
             <tr>

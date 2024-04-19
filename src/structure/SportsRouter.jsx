@@ -14,6 +14,12 @@ import EnglishChampionship from "./pages/EnglishChampionship";
 import EnglishLeagueOne from "./pages/EnglishLeagueOne";
 import EnglishLeagueTwo from "./pages/EnglishLeagueTwo";
 import SoccerLandingPage from "./pages/SoccerLandingPage";
+import Bundesliga from "./pages/Bundesliga";
+import SerieA from "./pages/SerieA";
+import LaLiga from "./pages/LaLiga";
+import Ligue1 from "./pages/Ligue1";
+import USLChampionship from "./pages/USLChampionship";
+import USLLeagueTwo from "./pages/USLLeagueTwo";
 
 export default function SportsRouter() {
     return <BrowserRouter>
@@ -32,6 +38,12 @@ export default function SportsRouter() {
                 <Route path="/EnglishLeagueOne" element={<EnglishLeagueOne />} />
                 <Route path="/EnglishLeagueTwo" element={<EnglishLeagueTwo />} />
                 <Route path="/SoccerLandingPage" element={<SoccerLandingPage />} />
+                <Route path="/Bundesliga" element={<Bundesliga />} />
+                <Route path="/SerieA" element={<SerieA />} />
+                <Route path="/LaLiga" element={<LaLiga />} />
+                <Route path="/Ligue1" element={<Ligue1 />} />
+                <Route path="/USLChampionship" element={<USLChampionship />} />
+                <Route path="/USLLeagueTwo" element={<USLLeagueTwo />} />
             </Route>
         </Routes>
     </BrowserRouter>

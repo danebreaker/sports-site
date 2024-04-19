@@ -1,13 +1,18 @@
-import { Card } from "react-bootstrap";
+import { useState } from "react";
+import { Button, Card, Modal } from "react-bootstrap";
 
 export default function MatchCard(props) {
     const time = new Date(props.strTimestamp)
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return <Card style={{ backgroundColor: "#383838", color: "white", margin: 10, alignContent: 'center' }}>
         <h5>{props.strEvent}</h5>
         <h6>{props.strSport === "Soccer" ? props.strLeague : ""}</h6>
         <h6>{time.toDateString() != "Invalid Date" ? time.toDateString() : ""}</h6>
-        {props.strStatus === "Match Finished" || props.strStatus === "FT" ? <></> : <h6>{time.toLocaleTimeString()}</h6>}
+
         <div style={{ display: 'flex', justifyContent: 'center' }}>
             <img src={props.strHomeTeamBadge + '/tiny'}></img>
             <h4 style={{ marginTop: 10, marginLeft: 10, marginRight: 10 }}>{props.intHomeScore ? props.intHomeScore : "0"}</h4>
@@ -19,5 +24,21 @@ export default function MatchCard(props) {
         </div>
         <h6>{props.strStatus === "1H" ? "1st Half" : props.strStatus === "2H" ? "2nd Half" : props.strStatus === "FT" ? "Final" : props.strStatus === "Match Finished" ? "Full Time" : props.strStatus === "NS" ? "Not Started" : props.strStatus}</h6>
         {(props.strStatus === "Match Finished" || props.strStatus === "FT") && props.strVideo ? <a href={props.strVideo} target="_blank" style={{ textDecoration: "none" }}>Highlights</a> : <></>}
+        <Button onClick={handleShow}>
+            Match Info
+        </Button>
+        <Modal show={show} onHide={handleClose} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>{props.strEvent}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <img src={props.strThumb} style={{ width: "100%" }} />
+                <p>
+                    {time.toDateString() != "Invalid Date" ? time.toDateString() : ""}<br />
+                    {props.strStatus === "Match Finished" || props.strStatus === "FT" ? "" : time.toLocaleTimeString()}<br />
+                    {props.strVenue ? props.strVenue : ""}<br />
+                </p>
+            </Modal.Body>
+        </Modal>
     </Card>
 }
