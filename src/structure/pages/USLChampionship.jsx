@@ -5,13 +5,13 @@ import '../../App.css';
 
 function USLChampionship() {
     const [matches, setMatches] = useState([]);
-    const [matchday, setMatchday] = useState(33);
+    const [matchday, setMatchday] = useState(8);
     const [table, setTable] = useState([]);
     const [liveScores, setLiveScores] = useState([]);
     const [upcomingMatches, setUpcomingMatches] = useState([]);
     const [hideSpinner, setHideSpinner] = useState("none");
 
-    const matchdays = [...Array(38).keys()];
+    const matchdays = [...Array(41).keys()];
 
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/3/eventsround.php?id=4684&r=${matchday}&s=2024`, {

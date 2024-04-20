@@ -5,7 +5,7 @@ import '../../App.css';
 
 function LaLiga() {
     const [matches, setMatches] = useState([]);
-    const [matchday, setMatchday] = useState(33);
+    const [matchday, setMatchday] = useState(32);
     const [table, setTable] = useState([]);
     const [liveScores, setLiveScores] = useState([]);
     const [upcomingMatches, setUpcomingMatches] = useState([]);
@@ -115,13 +115,13 @@ function LaLiga() {
                         {
                             table.map(team => {
                                 return <tr key={team.strTeam}>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intRank}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.strTeam}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intPlayed}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intWin}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intDraw}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intLoss}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intPoints}</td>
+                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : "white" }}>{team.intRank}</td>
+                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : "white" }}>{team.strTeam}</td>
+                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : "white" }}>{team.intPlayed}</td>
+                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : "white" }}>{team.intWin}</td>
+                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : "white" }}>{team.intDraw}</td>
+                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : "white" }}>{team.intLoss}</td>
+                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : "white" }}>{team.intPoints}</td>
                                 </tr>
                             })
                         }
@@ -129,8 +129,7 @@ function LaLiga() {
                 </Table>
                 <div style={{ textAlign: 'left' }}>
                     <p style={{ color: "#38abd8" }}>UEFA Champions League Group Stage</p>
-                    <p style={{ color: "#eab327" }}>Europe League Group Stage</p>
-                    <p style={{ color: "#fc3f3f" }}>Relegation to Championship</p>
+                    <p style={{ color: "#fc3f3f" }}>Relegation</p>
                 </div>
             </Tab>
         </Tabs>

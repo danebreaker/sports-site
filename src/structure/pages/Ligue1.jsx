@@ -5,13 +5,13 @@ import '../../App.css';
 
 function Ligue1() {
     const [matches, setMatches] = useState([]);
-    const [matchday, setMatchday] = useState(33);
+    const [matchday, setMatchday] = useState(30);
     const [table, setTable] = useState([]);
     const [liveScores, setLiveScores] = useState([]);
     const [upcomingMatches, setUpcomingMatches] = useState([]);
     const [hideSpinner, setHideSpinner] = useState("none");
 
-    const matchdays = [...Array(38).keys()];
+    const matchdays = [...Array(34).keys()];
 
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/3/eventsround.php?id=4334&r=${matchday}&s=2023-2024`, {
@@ -115,13 +115,13 @@ function Ligue1() {
                         {
                             table.map(team => {
                                 return <tr key={team.strTeam}>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intRank}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.strTeam}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intPlayed}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intWin}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intDraw}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intLoss}</td>
-                                    <td style={{ backgroundColor: team.intRank > 17 ? "#fc3f3f" : team.intRank < 5 ? "#38abd8" : team.intRank == 5 ? "#eab327" : "white" }}>{team.intPoints}</td>
+                                    <td style={{ backgroundColor: team.intRank > 16 ? "#fc3f3f" : team.intRank > 15 ? "#eab327" : team.intRank < 4 ? "#38abd8" : "white" }}>{team.intRank}</td>
+                                    <td style={{ backgroundColor: team.intRank > 16 ? "#fc3f3f" : team.intRank > 15 ? "#eab327" : team.intRank < 4 ? "#38abd8" : "white" }}>{team.strTeam}</td>
+                                    <td style={{ backgroundColor: team.intRank > 16 ? "#fc3f3f" : team.intRank > 15 ? "#eab327" : team.intRank < 4 ? "#38abd8" : "white" }}>{team.intPlayed}</td>
+                                    <td style={{ backgroundColor: team.intRank > 16 ? "#fc3f3f" : team.intRank > 15 ? "#eab327" : team.intRank < 4 ? "#38abd8" : "white" }}>{team.intWin}</td>
+                                    <td style={{ backgroundColor: team.intRank > 16 ? "#fc3f3f" : team.intRank > 15 ? "#eab327" : team.intRank < 4 ? "#38abd8" : "white" }}>{team.intDraw}</td>
+                                    <td style={{ backgroundColor: team.intRank > 16 ? "#fc3f3f" : team.intRank > 15 ? "#eab327" : team.intRank < 4 ? "#38abd8" : "white" }}>{team.intLoss}</td>
+                                    <td style={{ backgroundColor: team.intRank > 16 ? "#fc3f3f" : team.intRank > 15 ? "#eab327" : team.intRank < 4 ? "#38abd8" : "white" }}>{team.intPoints}</td>
                                 </tr>
                             })
                         }
@@ -129,8 +129,8 @@ function Ligue1() {
                 </Table>
                 <div style={{ textAlign: 'left' }}>
                     <p style={{ color: "#38abd8" }}>UEFA Champions League Group Stage</p>
-                    <p style={{ color: "#eab327" }}>Europe League Group Stage</p>
-                    <p style={{ color: "#fc3f3f" }}>Relegation to Championship</p>
+                    <p style={{ color: "#eab327" }}>Relegation Play-Offs</p>
+                    <p style={{ color: "#fc3f3f" }}>Relegation</p>
                 </div>
             </Tab>
         </Tabs>
