@@ -125,7 +125,7 @@ function FavoriteTeams() {
     }, [])
 
     return <>
-        <Tabs>
+        <Tabs fill>
             <Tab eventKey="Live Scores" title="Live" style={{ margin: 15 }}>
                 <h1>Coming Soon...</h1>
             </Tab>
