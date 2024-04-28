@@ -126,10 +126,10 @@ function FavoriteTeams() {
 
     return <>
         <Tabs>
-            <Tab eventKey="Live Scores" title="Live Scores" style={{ margin: 15 }}>
+            <Tab eventKey="Live Scores" title="Live" style={{ margin: 15 }}>
                 <h1>Coming Soon...</h1>
             </Tab>
-            <Tab eventKey="Upcoming Games" title="Upcoming Games" style={{ margin: 15 }}>
+            <Tab eventKey="Upcoming Games" title="Next" style={{ margin: 15 }}>
                 <Container fluid>
                     <Row>
                         <h1>Packers</h1>
@@ -196,7 +196,7 @@ function FavoriteTeams() {
                     </Row>
                 </Container>
             </Tab>
-            <Tab eventKey="Previous Games" title="Previous Games" style={{ margin: 15 }}>
+            <Tab eventKey="Previous Games" title="Prev" style={{ margin: 15 }}>
                 <Container fluid>
                     <Row>
                         <h1>Packers</h1>
